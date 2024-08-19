@@ -1,5 +1,0 @@
-pwd 								 > capa$1.txt
-find . -maxdepth 1 -type d -exec du -s  '{}' \; | sort -n -r    	>> capa$1.txt
-#find . -maxdepth 1 -type d -exec du -s  '{}' \; | sort  --key=2 	>> capa$1.txt
-#find . -maxdepth 1 -type d -exec du -sh '{}' \; | sort -n -r      >> capa$1.txt
-less capa$1.txt
