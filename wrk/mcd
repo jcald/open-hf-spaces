@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# Reemplaza los / por -- en el primer argumento
+arg1=${1//\//--}
+
+# Quita los espacios y convierte el segundo argumento a mayúsculas
+arg2=$(echo $2 | tr -d ' ' | tr '[:lower:]' '[:upper:]')
+
+# Crea el directorio y se mueve a él
+mkdir -p "$arg1"
+cd "$arg1"
+
+# Si la opción -g está presente, realiza una acción de GitHub
+if [[ $3 == "-g" ]]; then
+  echo "Realizando acción de GitHub con $arg1"
+  # Aquí iría el comando para GitHub
+  # github "$arg1"
+fi
+
+# Crea un archivo falta.sh
+# echo "#!/bin/bash" > falta.sh
+# echo "# Este es el archivo falta.sh" >> falta.sh
+
