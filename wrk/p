@@ -1,0 +1,19 @@
+if [ -a $1.py ]; then
+   vi $1.py $2 $3 $4 $5
+else
+#touch $1.py
+echo "#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+# vim: set fileencoding=utf-8 :
+import platform
+print(platform.python_version())
+print("\"--------------------------------\\n\"")
+
+" > $1.py
+vi +8 $1.py
+chmod 700 $1.py
+fi
+./$1.py
+
+
+#echo "#!/usr/bin/env python3.6
