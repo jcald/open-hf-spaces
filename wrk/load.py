@@ -64,9 +64,9 @@ pipe = pipe.to(device)
 
 #repeticiones = 1  # Valor predeterminado
 # Obtener parámetros del usuario
-num_images_default = 5
-guidance_scale_default = 7.5
-seed_default = None
+num_images = 5
+guidance_scale = 7.5
+#seed_default = None
 with open('prompts.txt', 'r') as archivo:
     while True:
         prompt = archivo.readline().strip()
@@ -78,7 +78,6 @@ with open('prompts.txt', 'r') as archivo:
         num_inference_steps=50,
         guidance_scale=guidance_scale,
         num_images=num_images,
-        
         ).images
 
 
