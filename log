@@ -1,0 +1,112 @@
+dj
+Already on 'main'
+Your branch is up to date with 'origin/main'.
+warning: adding embedded git repository: wrk/Diffree-OpenGVLab
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> wrk/Diffree-OpenGVLab
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached wrk/Diffree-OpenGVLab
+hint: 
+hint: See "git help submodule" for more information.
+warning: adding embedded git repository: wrk/Hyper-FLUX-8Steps-LoRA-ByteDance
+warning: adding embedded git repository: wrk/black-forest-labs-FLUX.1withXlabsLora-Jeff850
+[main 74dcad9] Descripción de tus cambios
+ 3 files changed, 3 insertions(+)
+ create mode 160000 wrk/Diffree-OpenGVLab
+ create mode 160000 wrk/Hyper-FLUX-8Steps-LoRA-ByteDance
+ create mode 160000 wrk/black-forest-labs-FLUX.1withXlabsLora-Jeff850
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (4/4), done.
+remote: Total 4 (delta 0), reused 4 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (4/4), 1.70 KiB | 174.00 KiB/s, done.
+From https://github.com/jcald/open-hf-spaces
+ * branch            main       -> FETCH_HEAD
+   333f4d3..04d35d4  main       -> origin/main
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+To https://github.com/jcald/open-hf-spaces
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/jcald/open-hf-spaces'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(diffree) nuevo@asdaqewg:~/jcald/ai/open-hf-spaces-jcald$ 
+(diffree) nuevo@asdaqewg:~/jcald/ai/open-hf-spaces-jcald$ 
+(diffree) nuevo@asdaqewg:~/jcald/ai/open-hf-spaces-jcald$ git rm --cached wrk/Diffree-OpenGVLab
+rm 'wrk/Diffree-OpenGVLab'
+(diffree) nuevo@asdaqewg:~/jcald/ai/open-hf-spaces-jcald$ dj
+D	wrk/Diffree-OpenGVLab
+Already on 'main'
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+  (use "git pull" if you want to integrate the remote branch with yours)
+warning: adding embedded git repository: wrk/Diffree-OpenGVLab
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> wrk/Diffree-OpenGVLab
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached wrk/Diffree-OpenGVLab
+hint: 
+hint: See "git help submodule" for more information.
+On branch main
+Your branch and 'origin/main' have diverged,
+and have 1 and 1 different commits each, respectively.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   wrk/Diffree-OpenGVLab (modified content, untracked content)
+
+no changes added to commit (use "git add" and/or "git commit -a")
+From https://github.com/jcald/open-hf-spaces
+ * branch            main       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+To https://github.com/jcald/open-hf-spaces
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/jcald/open-hf-spaces'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. If you want to integrate the remote changes,
+hint: use 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+(diffree) nuevo@asdaqewg:~/jcald/ai/open-hf-spaces-jcald$ 
+
+:
