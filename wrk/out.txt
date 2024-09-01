@@ -1,0 +1,140 @@
+studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ ./load.py 
+3.10.14
+--------------------------------
+
+config.json: 100%|██████████████████████████████████████████████████████████████████████| 1.41k/1.41k [00:00<00:00, 10.4MB/s]
+Unrecognized keys in `rope_scaling` for 'rope_type'='linear': {'type'}
+model.safetensors.index.json: 100%|█████████████████████████████████████████████████████| 70.2k/70.2k [00:00<00:00, 6.16MB/s]
+model-00001-of-00003.safetensors: 100%|██████████████████████████████████████████████████| 4.99G/4.99G [00:15<00:00, 319MB/s]
+model-00002-of-00003.safetensors: 100%|██████████████████████████████████████████████████| 4.96G/4.96G [00:20<00:00, 244MB/s]
+model-00003-of-00003.safetensors: 100%|██████████████████████████████████████████████████| 4.18G/4.18G [00:17<00:00, 237MB/s]
+Downloading shards: 100%|██████████████████████████████████████████████████████████████████████| 3/3 [00:54<00:00, 18.01s/it]
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 3/3 [02:18<00:00, 46.17s/it]
+generation_config.json: 100%|███████████████████████████████████████████████████████████████| 137/137 [00:00<00:00, 1.15MB/s]
+preprocessor_config.json: 100%|█████████████████████████████████████████████████████████████| 741/741 [00:00<00:00, 5.79MB/s]
+tokenizer_config.json: 100%|████████████████████████████████████████████████████████████| 1.36k/1.36k [00:00<00:00, 12.8MB/s]
+tokenizer.model: 100%|█████████████████████████████████████████████████████████████████████| 500k/500k [00:00<00:00, 496MB/s]
+tokenizer.json: 100%|████████████████████████████████████████████████████████████████████| 1.84M/1.84M [00:00<00:00, 151MB/s]
+added_tokens.json: 100%|███████████████████████████████████████████████████████████████████| 43.0/43.0 [00:00<00:00, 403kB/s]
+special_tokens_map.json: 100%|██████████████████████████████████████████████████████████████| 552/552 [00:00<00:00, 5.02MB/s]
+chat_template.json: 100%|███████████████████████████████████████████████████████████████████| 838/838 [00:00<00:00, 6.47MB/s]
+sample_demo_1.mp4: 100%|█████████████████████████████████████████████████████████████████| 1.55M/1.55M [00:00<00:00, 155MB/s]
+/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/transformers/feature_extraction_utils.py:142: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1698976205261/work/torch/csrc/utils/tensor_new.cpp:245.)
+  return torch.tensor(value)
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+ER: 
+Why is this video funny? ASSISTANT: The humor in this video comes from the unexpected and endearing nature of the situation. The baby is wearing glasses and appears to be reading a book, which is a humorous and endearing sight because babies are typically not expected to be able to read at such a young age. The glasses add a touch of whimsy and the baby's expression and actions suggest that they are deeply engrossed in the book, which is a playful and amusing portray
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ nano ./load.py 
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ ./load.py 
+3.10.14
+--------------------------------
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='linear': {'type'}
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 3/3 [01:46<00:00, 35.65s/it]
+Traceback (most recent call last):
+  File "/home/studio-lab-user/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf/./load.py", line 65, in <module>
+    total_frames = container.streams.video[0].frames
+IndexError: tuple index out of range
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ nano ./load.py 
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ ./load.py 
+3.10.14
+--------------------------------
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='linear': {'type'}
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 3/3 [01:46<00:00, 35.63s/it]
+Traceback (most recent call last):
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/utils/_errors.py", line 304, in hf_raise_for_status
+    response.raise_for_status()
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: https://huggingface.co/datasets/raushan-testing-hf/videos-test/resolve/main/video_demo_2.mp4
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/studio-lab-user/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf/./load.py", line 60, in <module>
+    video_path = hf_hub_download(repo_id="raushan-testing-hf/videos-test", filename="video_demo_2.mp4", repo_type="dataset")
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/utils/_deprecation.py", line 101, in inner_f
+    return f(*args, **kwargs)
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1240, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1303, in _hf_hub_download_to_cache_dir
+    (url_to_download, etag, commit_hash, expected_size, head_call_error) = _get_metadata_or_catch_error(
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1751, in _get_metadata_or_catch_error
+    metadata = get_hf_file_metadata(
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/utils/_validators.py", line 114, in _inner_fn
+    return fn(*args, **kwargs)
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 1673, in get_hf_file_metadata
+    r = _request_wrapper(
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 376, in _request_wrapper
+    response = _request_wrapper(
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/file_download.py", line 400, in _request_wrapper
+    hf_raise_for_status(response)
+  File "/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/huggingface_hub/utils/_errors.py", line 315, in hf_raise_for_status
+    raise EntryNotFoundError(message, response) from e
+huggingface_hub.utils._errors.EntryNotFoundError: 404 Client Error. (Request ID: Root=1-66d4d1d2-1841ab0b4368beb9029ab8c0;44977c32-d510-4f4e-9db0-8be38c3b9221)
+
+Entry Not Found for url: https://huggingface.co/datasets/raushan-testing-hf/videos-test/resolve/main/video_demo_2.mp4.
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ nano ./load.py 
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ ./load.py 
+3.10.14
+--------------------------------
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='linear': {'type'}
+Loading checkpoint shards:  67%|██████████████████████████████████████████                     | 2/3 [01:15<00:37, 37.60s/it]
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 3/3 [01:46<00:00, 35.63s/it]
+sample_demo_3.mp4: 100%|██████████████████████████████████████████████████████████████████| 464k/464k [00:00<00:00, 20.4MB/s]
+/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/transformers/feature_extraction_utils.py:142: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1698976205261/work/torch/csrc/utils/tensor_new.cpp:245.)
+  return torch.tensor(value)
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+ER: 
+Why is this video funny? ASSISTANT: The humor in this video comes from the unexpected and endearing nature of the situation. The child is playing with a toy truck, and the camera captures a moment where the truck falls off the table, which is a common occurrence for children during playtime. The child's reaction to the truck falling is what makes the scene funny, as it's a relatable and innocent moment that many parents can identify with. The child's surprised and disappointed expression
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ 
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ nano ./load.py 
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ ./load.py 
+3.10.14
+--------------------------------
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='linear': {'type'}
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 3/3 [01:46<00:00, 35.63s/it]
+sample_video_2.avi: 100%|█████████████████████████████████████████████████████████████████| 386k/386k [00:00<00:00, 10.7MB/s]
+/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/transformers/feature_extraction_utils.py:142: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1698976205261/work/torch/csrc/utils/tensor_new.cpp:245.)
+  return torch.tensor(value)
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+ER: 
+Why is this video funny? ASSISTANT: The humor in this video comes from the unexpected and endearing interaction between the woman and her dog. The dog is sitting calmly on the stove while the woman is cooking, and she seems to be completely unaware of its presence. The dog's position on the stove is unusual and potentially dangerous, as it could cause a fire or be harmed by the heat. The woman's casual and unconcerned demeanor while cooking adds to the com
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ nano ./load.py 
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ ./load.py 
+3.10.14
+--------------------------------
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='linear': {'type'}
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 3/3 [01:46<00:00, 35.63s/it]
+video_demo_2.npy: 100%|█████████████████████████████████████████████████████████████████| 1.84M/1.84M [00:00<00:00, 84.9MB/s]
+Traceback (most recent call last):
+  File "/home/studio-lab-user/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf/./load.py", line 64, in <module>
+    container = av.open(video_path)
+  File "av/container/core.pyx", line 420, in av.container.core.open
+  File "av/container/core.pyx", line 266, in av.container.core.Container.__cinit__
+  File "av/container/core.pyx", line 286, in av.container.core.Container.err_check
+  File "av/error.pyx", line 326, in av.error.err_check
+av.error.InvalidDataError: [Errno 1094995529] Invalid data found when processing input: '/home/studio-lab-user/.cache/huggingface/hub/datasets--raushan-testing-hf--videos-test/snapshots/655c9ae43a5a61f91aa3662d115c677b7d760d1e/video_demo_2.npy'
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ nano ./load.py 
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ ./load.py 
+
+
+~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ ./load.py 
+3.10.14
+--------------------------------
+
+Unrecognized keys in `rope_scaling` for 'rope_type'='linear': {'type'}
+Loading checkpoint shards: 100%|███████████████████████████████████████████████████████████████| 3/3 [01:46<00:00, 35.63s/it]
+Cooking_cake.mp4: 100%|█████████████████████████████████████████████████████████████████| 55.2M/55.2M [00:01<00:00, 50.2MB/s]
+/opt/conda/envs/sagemaker-distribution/lib/python3.10/site-packages/transformers/feature_extraction_utils.py:142: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at /home/conda/feedstock_root/build_artifacts/pytorch-recipe_1698976205261/work/torch/csrc/utils/tensor_new.cpp:245.)
+  return torch.tensor(value)
+The `seen_tokens` attribute is deprecated and will be removed in v4.41. Use the `cache_position` model input instead.
+ER: 
+Why is this video funny? ASSISTANT: The humor in this video comes from the unexpected and somewhat awkward situation the man is in. He is standing in a kitchen, and it appears that he is about to make a doughnut, but instead of using a traditional doughnut cutter, he is using a large, round, flat, and somewhat oversized object to cut the doughnut. The size of the object and the way he handles it make the task seem comically challenging and exaggerated, which
+(sagemaker-distribution) studio-lab-user@default:~/jcald/llava-hf--LLaVA-NeXT-Video-7B-hf$ 
