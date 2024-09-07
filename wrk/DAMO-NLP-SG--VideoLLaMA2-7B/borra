@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+pip3-autoremove  torch torchvision transformers tokenizers deepspeed accelerate peft timm numpy spaces decord imageio imageio-ffmpeg moviepy scenedetect opencv-python pysubs2 scikit-learn huggingface_hub sentencepiece shortuuid einops einops-exts bitsandbytes pydantic> markdown2[all] gradio gradio_client httpx requests openai uvicorn fastapi tensorboard wandb tabulate
