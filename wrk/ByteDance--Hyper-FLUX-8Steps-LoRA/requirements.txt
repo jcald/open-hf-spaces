@@ -1,0 +1,8 @@
+accelerate
+diffusers==0.30.0
+invisible_watermark
+torch
+transformers==4.43.3
+xformers
+sentencepiece
+peft
